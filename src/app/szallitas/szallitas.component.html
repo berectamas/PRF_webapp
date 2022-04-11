@@ -1,0 +1,79 @@
+
+
+<!-- Header <div class="header"></div> -->
+
+
+
+<div>
+</div>
+<div class="topnav">
+  <a (click) = "goToFirst()">Főoldal</a>
+  <a (click) = "goToSecond()" >Étlap</a>
+  <a  id="actual">Szallítási információk</a>
+  <div class="login-container">
+    <form>
+      <button [routerLink]="['/login']" class = "logout">Log Out</button>
+      <img *ngIf="!isAdminUser" class="basket" src = "../../assets/img/kosar.png" style="width: 50px;; align-self: center; margin-top: 8%; background-color: transparent;" (click)="showBasket()"/>
+      <button *ngIf="!isAdminUser" style="background-color: red;size:50%; border-radius: 100%; color: white; font-size: 15px; padding: 0px 5px 0px 5px;"> {{itemCounter}} </button>
+    </form>
+  </div>
+</div>
+<!-- The flexible grid (content) -->
+
+
+<div class="box">
+<div class="row">
+  <div id="pict"> 
+<img src="../../assets/img/futar.jpg">
+</div>
+  <div id="pic"> 
+    <img src="../../assets/img/futar.jpg">
+</div>
+ 
+  <main>
+
+  <h1>Szállítási információk</h1>
+	<h2 >Tisztelt Vendégeink! </h2>
+<hr>
+<br>
+	<p>09:00 és 20:00 között tudunk pizzát házhozszállítani.  Megértésüket köszönjük!  </p>   
+	<p>A személyes átvétel ingyenes.</p>
+	<p>Kiszállítás költségei:</p>  
+	<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Begaszentgyörgy</th>
+	  <th>Begaszentgyörgyi község</th>
+	  <th>Közép-bánsági körzet</th>
+	  <th>Bánság</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Költség</td>
+      <td>300 Ft</td>
+	  <td>500 Ft</td>
+	  <td>700 Ft</td>
+	  <td>1100 Ft</td>
+    </tr>
+    
+  </tbody>
+ 
+</table>
+<br>
+<hr>
+<br>
+	<p>További kiszállítási körzetekről érdeklődj diszpécsereinknél.</p>  
+	<p>Csomagolás díja minden esetben: 155 Ft / étel. (Amennyiben egy megrendelés több tételt is tartalmaz, úgy a csomagolás tételenként kerül felszámításra)</p>  
+	<p>FONTOS! Alkoholos ital fizetése kizárólag bankkártyával és készpénzzel lehetséges. SZÉP kártyával történő fizetést ebben az esetben sajnos nem áll módunkban elfogadni. Köszönjük a megértést. </p>  
+	<p>Kiszállítás várható ideje: 40 perc</p>    
+<br>
+<hr>
+	<p>Fizetési módok:   <br>1. Készpénz. <br> 2. Étkezési utalvány (Erzsébet, Ticket, Sodexo). A  Puebla és a Posta paletta utalványokat nem fogadjuk el.<br>  3. Kártyás fizetés (POS terminállal): Erzsébet kártya, bankkártyák. Jelezd a diszpécsernél vagy a megrendelésnél a megjegyzés mezőben, ha bankkártyával szeretnél fizetni, s ezt bárhol megteheted.  </p> Kártyás fizetés esetén csak az étkezés zsebet áll módunkban elfogadni, az ajándék és szabadidő zsebet sajnos nem tudjuk elfogadni.  <p> Hitelkártyát sajnos nem áll módunkban elfogadni. Köszönjük a megértést. </p>   <p>Áraink forintban értendőek és tartalmazzák az ÁFA-t. </p>
+ <br>
+<hr>
+<br>
+   </main>
+</div>
+</div>

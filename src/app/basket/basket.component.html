@@ -1,0 +1,53 @@
+
+  <div>
+</div>
+<div class="topnav">
+    <a (click) = "goToFirst()">Főoldal</a>
+    <a   id="actual" (click) = "goToSecond()">Étlap</a>
+    <a (click) = "goToThird()">Szallítási információk</a>
+    <div class="login-container">
+      <form>
+        <button [routerLink]="['/login']" class = "logout" type="submit">Log Out</button>
+        <img src = "../../assets/img/kosar.png" style="width: 50px;; align-self: center; margin-top: 8%; background-color: transparent;"/>
+        <button style="background-color: red;size:50%; border-radius: 100%; color: white; font-size: 15px; padding: 0px 5px 0px 5px;"> {{itemCounter}} </button>
+      </form>
+    </div>
+</div> 
+
+<div class="box">
+    <div class="row">
+    
+        <main>
+            <h2 style="text-align:center; color:white;">Rendelt pizzák</h2>
+            <table border="0" cellpadding="0" cellspacing="0"  style="width: 100%; margin-bottom: 10px;">
+        <tbody>
+            <tr *ngFor = "let x of names; let i = index">
+                <td style="vertical-align: top; width: 100px;"> 
+                    <tr>
+                        <button  class = "del" (click) = "sub(i)" >-</button>
+                        <label>{{values[i]}}</label>
+                        <button class = "add" (click) = "add(i)">+</button>
+
+                    </tr>
+                </td>
+                <td>
+                <h3>{{x}}</h3>
+    
+                <p><span style="font-size:16px; ">{{desc[i]}}</span></p>
+                </td>
+                <td style="width: 100px; text-align: right;">
+                <h2>{{values[i] * prices[i]}}- Ft</h2>
+    
+                
+                </td>
+                <td style="width: 10px;"> </td>
+            </tr>
+        </tbody>
+    </table>
+    <div >
+    <p style="color:white; font-size:25px; text-align:right; font-weight:bold; margin-right: 0px;"> Összesen: {{price}} Ft</p>
+    <button [routerLink]="['/done']" style="color:white; font-size:25px; align-self: center; font-weight:bold; margin-right: 0px; background-color: green;"> Rendel</button>
+    </div>  
+        </main>
+    </div>
+    </div>

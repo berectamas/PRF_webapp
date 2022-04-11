@@ -1,0 +1,89 @@
+  <!-- Highlight Card 
+
+
+
+ Header <div class="header"></div> -->
+<!--<div class="navbar">
+  <nav>
+    <ul>
+      <li  class="left"></li>
+      <li><a [routerLink]="['/second']" >Étlap</a></li>
+      <li><a [routerLink]="['/login']">Logout</a></li>
+    </ul>
+ </nav>
+</div>
+
+The flexible grid (content) -->
+
+<div>
+</div>
+<div class="topnav">
+  <a id="actual">Főoldal</a>
+  <a (click) = "goToSecond()" >Étlap</a>
+  <a (click) = "goToThird()">Szallítási információk</a>
+  <div class="login-container">
+    <form action="/action_page.php">
+      <button [routerLink]="['/login']" class = "logout">Log Out</button>
+	  <img  *ngIf="!isAdminUser" class = "basket" src = "../../assets/img/kosar.png" style="width: 50px;; align-self: center; margin-top: 8%; background-color: transparent;" (click) = "showBasket()"/>
+	  <button *ngIf="!isAdminUser" style="background-color: red;size:50%; border-radius: 100%; color: white; font-size: 15px; padding: 0px 5px 0px 5px;"> {{itemCounter}} </button>
+    </form>
+  </div>
+</div>
+
+<div class="box">
+<div class="row">
+
+  <aside>
+    <div id="div1"><h2>Rólunk</h2></div>
+    
+	<div class="pic1">
+	</div>
+	<div class="colleague">
+    <p>Éttermünket Böröc Tamás alapította, 2022-ben Szegeden.</p>    
+    <img src="../../assets/img/munkatars1.jpg" alt="image" align="top left" style="height:150px; margin:5px;" /> 
+    <br>
+      <b>Böröc Tamás</b>
+      <br>Alapító tulajdonos
+    <br>
+
+	</div>
+ </aside>
+
+  <main>
+    <div id="div1"><h1>Üdvözöljük honlapunkon!</h1></div>
+    
+    
+    <p align="justify">Célunk, hogy szegedi és vonzáskörzetének lakóinak közelebb hozzuk a méltán közkedvelt olasz konyhát, és akik még nem ismerik, azokkal megismertessük a mediterrán íz világot, és közkedvelt magyaros ízvilágunkkal élményt vigyünk a mindennapi életükbe. Ezzel is gazdagítva a megélt pillanatok gazdagságát. Ételeink elkészítésekor kiváló és minden nap ellenőrzött alapanyagokat használunk, árainkat mégis úgy szabtuk meg, hogy kínálatunkat mindenki számára elérhetővé tegyük.</p>
+    <br>
+	<table align="center">
+	
+			<tr> 
+				<th colspan="7">Nyitvatartás</th>
+			</tr>
+			
+		
+			<tr style="font: bold 15px Tahoma; ">
+				<td> Hétfő</td>
+				<td>Kedd</td> 
+				<td>Szerda</td> 
+				<td>Csütörtök</td>
+				<td> Péntek </td>
+				<td>Szombat</td>
+				<td> Vasárnap </td>
+			</tr>
+			<tr style="font:15px Tahoma;">
+				<td> Zárva</td>
+				<td> 9:00 - 20:00 </td>
+				<td> 9:00 - 20:00 </td>
+				<td> 9:00 - 20:00 </td>
+				<td> 9:00 - 22:00 </td>
+				<td> 9:00 - 24:00 </td>
+				<td> 0:00 - 24:00 </td>				
+			</tr>
+		</table>
+	<br>
+	<p align="justify">Ételeinket a hagyományos módszer szerint készülnek, szakképzett szakácsainknak köszönhetően, akár 40 percen belül az olasz és magyar konyha hagyományos ízeit tudjuk az otthonodba varázsolni.
+</p>
+    </main>
+</div>
+</div>

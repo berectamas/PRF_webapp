@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+  }
+
+  .navbar nav {
+    display: flex;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../assets/img/brown.jpg);
+    left:0px;
+    top:20%;
+    height:8%;
+    position:fixed;
+    width:100%;
+    z-index:100;
+    
+  }
+  
+
+
+  .navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  .navbar li{
+      list-style:none;
+      padding: 5px;
+      text-decoration:none;
+      font: bold 20px Tahoma;
+      display:inline-block;
+      text-align:center;
+  }
+  
+  .left{
+  float:left;
+  }
+  .cleat{
+  clear:left;
+  }
+  
+  /* Change color on hover */
+  .navbar a:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(../../assets/img/brown.jpg);
+    color: white;
+    font: italic bold 20px Tahoma;
+  }
+  .navbar a:active{
+      background-color:#1C1919;
+      color: white;
+      font: italic bold 20px Tahoma;
+  }
+  
+  #actual{
+      
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),url(../../assets/img/brown.jpg);
+      font: italic bold 20px Tahoma;
+  }
+  
+  /* Style the body */
+  body {
+    font-family: Arial;
+    margin: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../assets/img/brown.jpg);
+    
+  }
+  
+  /* Column container text-align:right;*/
+  .row {  
+    top:260px;
+    position:absolute;
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    
+  }
+  
+  
+  /* Create two unequal columns that sits next to each other */
+  /* Sidebar/left column */
+  
+  
+  /* Main column */
+  main {
+    flex: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../../assets/img/brown.jpg);
+    padding: 20px;
+    
+  }
+  
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .box div {
+    width: 80%;
+    top:40%;
+
+  }
+  
+  
+  footer {
+      width: 70%;
+      text-align: center;
+  
+  }
+  
+  
+  footer span {
+      position: fixed;
+      bottom:0;
+      text-align: center;
+      padding:3px;
+      margin-top: 100%;
+      color:white;
+     
+  }
+  
+  table{
+      width:100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5)), url(../../assets/img/brown.jpg);
+      border: 1px solid #333;
+      color:white;
+      }
+      
+      
+  
+  table, th, td {
+    border: 1px solid url(../../assets/img/brown.jpg);
+  }
+  
+
+  nav{
+  float:right;
+  }
+  
+  .new {
+    background-color: red;
+    color: white;
+    float:right;
+    padding: 5px, 5px;
+    margin: 1% 1%;
+    border: none;
+    cursor: pointer;
+    width: 5%;
+    text-align: center;
+  }
+  
+  
+  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 1000px) {
+    .row, .navbar {   
+      flex-direction: column;
+    }
+      
+  }
+
+  .topnav {
+    overflow:hidden;
+    position: absolute;
+    top:28%;
+    left:0%;
+    width:100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../assets/img/brown.jpg);
+  }
+  
+  .topnav a {
+    float: left;
+    display:block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(../../assets/img/brown.jpg);
+    color: white;
+    cursor:pointer;
+  }
+  
+  .topnav a.active {
+    background-color: #2196F3;
+    color: white;
+  }
+  
+  .topnav .login-container {
+    float: right;
+  }
+  
+  .topnav input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    width:120px;
+  }
+  
+  .topnav .login-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background-color: #555;
+    color: white;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .topnav .login-container button:hover {
+    background-color: green;
+  }
+  .logout{
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 9)), url(../../assets/img/brown.jpg);
+  }
+  .modify{
+    margin-top: 12px;
+    margin-left: 10px;
+    color:white;
+    background-color: darkgreen;
+  }
+  .delete{
+    margin-top: 12px;
+    margin-left: 20px;
+    color:white;
+    background-color: darkred;
+  }
+  .modify:hover{
+    cursor: pointer;
+  }
+  .delete:hover{
+    cursor: pointer;
+  }
+  .basket:hover{
+    cursor: pointer;
+  }

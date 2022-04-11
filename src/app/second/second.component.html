@@ -1,0 +1,76 @@
+<!--
+<div class="content" role="main">
+
+
+	<div class="card highlight-card card-small" (click) = "hello()">
+  
+	  <span>{{ title }} app is running!</span>
+	</div>
+	<div *ngIf = "title === 'PRF'">
+	  <span>
+		{{1+1}}
+	  </span>  
+	</div>
+	<ul>
+	  <li *ngFor = "let x of example" (click) = "helloFrom(x)">
+		  {{x}}
+	  </li>
+	</ul>
+	<input type="text" [(ngModel)] = "title">
+	<button>Second</button>
+	<a [routerLink]="['/login']">Logout</a>
+  </div>-->
+
+<div>
+</div>
+<div class="topnav">
+  <a (click)="goToFirst()">Főoldal</a>
+  <a   id="actual">Étlap</a>
+  <a (click)="goToThird()">Szallítási információk</a>
+  <div class="login-container">
+    <form action="/action_page.php">
+      <button [routerLink]="['/login']" class = "logout" type="submit">Log Out</button>
+	  <img class="basket" *ngIf="!isAdminUser" src = "../../assets/img/kosar.png" style="width: 50px;; align-self: center; margin-top: 8%; background-color: transparent;"  (click) = "showBasket()"/>
+	  <button *ngIf="!isAdminUser" style="background-color: red;size:50%; border-radius: 100%; color: white; font-size: 15px; padding: 0px 5px 0px 5px;"> {{itemCounter}} </button>
+    </form>
+  </div>
+</div> 
+
+<!-- The flexible grid (content) -->
+<div class="box">
+<div class="row">
+
+	<main>
+		<h2 style="text-align:center; color:white;"> Válasszon a következő pizzák közül <button [routerLink]="['/addfood']" *ngIf="isAdminUser" class = "new" type="submit">Új</button> </h2>
+		<table border="0" cellpadding="0" cellspacing="0"  style="width: 100%; margin-bottom: 10px;">
+	<tbody>
+		<tr *ngFor = "let x of itemNames; let i = index">  
+			<td style="vertical-align: top; width: 100px;  border-bottom: 5px solid rgb(0, 0, 0);"> 
+				<tr>
+					<button *ngIf="isAdminUser" class = "modify" (click) = "goToModifyPage(x)" >Módosítás</button>
+					<button *ngIf="isAdminUser" class = "delete" (click) = "delete(x)" >Törlés</button>
+					<img class="basket" *ngIf="!isAdminUser" src = "../../assets/img/kosar.png" style="width: 100%;; align-self: center; margin-top: 20%; background-color: transparent;" (click)="addtoBasket(x,itemDescription[i],itemPrices[i])"/>
+
+				</tr>
+			</td>
+			<td style = " border-bottom: 5px solid rgb(0, 0, 0);">
+			<h3>{{itemNames[i]}}</h3>
+
+			<p><span style="font-size:16px; ">{{itemDescription[i]}}</span></p>
+			</td>
+			<td style="width: 90px;  border-bottom: 5px solid rgb(0, 0, 0);">
+			<p><span style="font-size:18px;">30 cm: </span></p>
+			</td>
+			<td style="width: 100px; text-align: right;  border-bottom: 5px solid rgb(0, 0, 0);">
+			<h2>{{itemPrices[i]}},- Ft</h2>
+
+			
+			</td>
+			<td style="width: 10px;"> </td>
+		</tr>
+	</tbody>
+</table>
+
+    </main>
+</div>
+</div>

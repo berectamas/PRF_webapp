@@ -1,0 +1,63 @@
+/* Bordered form */
+form {
+    border: 3px solid #f1f1f1;
+  }
+  
+  /* Full-width inputs */
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    background-color: #1c7efd;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  /* Add a hover effect for buttons */
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Add padding to containers */
+  .container {
+    padding: 16px;
+    position: absolute;
+    width: 60%;
+    top:40%;
+    left:20%;
+  }
+  .errorMessage{
+    color: red;
+    text-align: center;
+    width: 100%;
+  }
+  
+  /* The "Forgot password" text */
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  header {
+    left:0px;
+    top:0px;
+    position:fixed;
+    padding: 0px;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../assets/img/pizza-header2.jpg);
+    background-repeat: repeat;
+    color: white;
+    text-transform: uppercase;
+    width:100%;
+    z-index:100;  
+  }

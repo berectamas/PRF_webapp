@@ -1,0 +1,27 @@
+<div>
+</div>
+<div class="topnav">
+  <a   [routerLink]="['/first']">Főoldal</a>
+  <a  [routerLink]="['/second']" id="actual">Étlap</a>
+  <a [routerLink]="['/szallitas']">Szallítási információk</a>
+  <div class="login-container">
+    <form action="/action_page.php">
+      <button [routerLink]="['/login']" class = "logout" type="submit">Log Out</button>
+    </form>
+  </div>
+</div>
+
+
+<div class="container">
+  <label><b>Pizza neve</b></label>
+  <input type="text" placeholder="Pizza neve" [(ngModel)]="name">
+  <label><b>Leírás</b></label>
+  <textarea rows="8" placeholder="Pizza jellenzői" [(ngModel)]="description"></textarea>
+  <label><b>Ára [ ft ]</b></label>
+  <input type="text" placeholder="Pizza ára"[(ngModel)]="price">
+  <button type="button" (click) = "setItems()">Felvétel</button>
+  <div *ngIf = "nsuccess" class="message">
+    <label for="uname"><b>Sikertelen felvétel!</b></label></div>
+    <div *ngIf = "!nsuccess && started" class="message2">
+      <label for="uname"><b>Sikeres felvétel!</b></label></div>
+</div>
